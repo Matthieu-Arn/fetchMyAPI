@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetchMyAPI</title>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+         fetch("https://ci-swapi.herokuapp.com/api/planets")
+            .then(response => response.text())
+            .then(data => displayData(data))
+        
+        function displayData (data) {
+            document.getElementById("content").innerText = data;
+        }
+    </script>
+</body>
+</html>
